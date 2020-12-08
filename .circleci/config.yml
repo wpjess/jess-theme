@@ -15,4 +15,4 @@ jobs:
       - checkout
       - run:
           name: Send Via SFTP
-          command: lftp sftp://studentloanshark-migration:297b09d661cd3e@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./wp-content/themes/; quit"
+          command: lftp sftp://studentloanshark-migration:297b09d661cd3e@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./wp-content/themes; quit"
