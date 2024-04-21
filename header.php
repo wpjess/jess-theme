@@ -20,9 +20,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"> 
 
 
-<!-- all our JS is at the bottom of the page, except for Modernizr. -->
-<script src="<?php bloginfo('template_directory'); ?>/js/modernizr.custom.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/detectizr.js"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/mobile-menu/css/jquery.fatNav.min.css">
 
 <?php wp_head(); ?>
 
@@ -46,12 +44,16 @@
 	</ul>
 	</nav>
 
-	<div id="dl-menu" class="dl-menuwrapper">
-		<button class="dl-trigger">Open Menu</button>
-		<ul class="dl-menu">
-			<?php wp_nav_menu(array('theme_location' => 'main_menu', 'depth' => 3, 'container' => false)); ?>
-		</ul>
-	</div>
+	<a href="javascript:void(0)" class="hamburger"><div class="hamburger__icon"></div></a>
+	<div class="fat-nav">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <?php wp_nav_menu(array('theme_location' => 'main_menu', 'depth' => 3, 'container' => false)); ?>
+                <li><a href="https://www.instagram.com/jmichaelashland/" target="_blank">
+		<img src="<?php bloginfo("template_directory") ?>/images/instagram.png" alt="" title="" /></a></li>
+            </ul>
+        </div>
+    </div>
 	</div>
 
 </header>

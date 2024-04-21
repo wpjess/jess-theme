@@ -6,6 +6,19 @@
 </div>
 <?php do_action('wp_footer'); ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo("template_directory") ?>/js/mobile-menu/js/jquery.fatNav.js"></script>
+<script>
+  
+  $(".hamburger").click(function() {
+            $('.fat-nav').toggleClass('active');
+            //$('.fat-nav').show();
+           // $('#header').toggleClass('active');
+            $('#header .hamburger').toggleClass('active');
+    });
+  
+</script>
+
 <script src="<?php bloginfo('template_directory'); ?>/js/accordion.js"></script>
 <script>
   $(document).ready(function() {
