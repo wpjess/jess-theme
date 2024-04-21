@@ -1,3 +1,4 @@
+<?php
 function theme_options_menu() {
     add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'theme-options', 'theme_options_page');
 }
@@ -93,7 +94,7 @@ function file_upload_callback() {
     $file_url = isset( $options['file_upload'] ) ? esc_url( $options['file_upload'] ) : '';
     echo '<input type="text" id="file_upload" name="theme_options[file_upload]" value="' . $file_url . '" />';
     echo '<input type="button" class="button button-secondary" value="Upload File" id="upload_button">';
-    echo '<span class="description">Upload your file here.</span>';
+    echo '<span class="description">Logo</span>';
     echo '<br>';
     echo '<img id="file_upload_preview" src="' . esc_url( $file_url ) . '" style="max-width: 200px; max-height: 200px;">';
 }
