@@ -94,7 +94,7 @@ function file_upload_callback() {
     $file_url = isset( $options['file_upload'] ) ? esc_url( $options['file_upload'] ) : '';
     echo '<input type="text" id="file_upload" name="theme_options[file_upload]" value="' . $file_url . '" />';
     echo '<input type="button" class="button button-secondary" value="Upload File" id="upload_button">';
-    echo '<span class="description">Logo</span>';
+    echo '<span class="description"> </span>';
     echo '<br>';
     echo '<img id="file_upload_preview" src="' . esc_url( $file_url ) . '" style="max-width: 200px; max-height: 200px;">';
 }
@@ -130,7 +130,7 @@ function theme_options_init() {
     // Add fields to the "general" section
     add_settings_field( 'site_title', 'Site Title', 'site_title_callback', 'theme_options', 'general_section' );
     add_settings_field( 'site_description', 'Site Description', 'site_description_callback', 'theme_options', 'general_section' );
-    add_settings_field( 'file_upload', 'File Upload', 'file_upload_callback', 'theme_options', 'general_section' );
+    add_settings_field( 'file_upload', 'Logo', 'file_upload_callback', 'theme_options', 'general_section' );
 
     add_settings_field( 'radio_field', 'Radio Field', 'radio_field_callback', 'theme_options', 'general_section' );
     add_settings_field( 'checkbox_field', 'Checkbox Field', 'checkbox_field_callback', 'theme_options', 'general_section' );
